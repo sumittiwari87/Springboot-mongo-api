@@ -1,4 +1,4 @@
-package com.kloudspot.evaluation;
+package com.mycloudknowledge.evaluation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

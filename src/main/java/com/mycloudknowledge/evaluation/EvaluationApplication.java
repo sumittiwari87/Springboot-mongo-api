@@ -1,4 +1,4 @@
-package com.kloudspot.evaluation;
+package com.mycloudknowledge.evaluation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
