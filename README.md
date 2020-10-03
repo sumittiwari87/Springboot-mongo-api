@@ -6,6 +6,7 @@ For further reference, please consider the following sections:
 * [Official Gradle documentation](https://docs.gradle.org)
 * [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/gradle-plugin/reference/html/)
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/gradle-plugin/reference/html/#build-image)
+
 # Spring boot API with Mongo DB 
 
 This project is a small POC for exposing all REST API for a bookstore for adding/updating/viewing/deleting book details. Mongo DB has been used a database. 
@@ -51,6 +52,8 @@ $ cd src/main/resources
 $ docker-compose up
 ```
 ### Deployement on AWS using ECR, ECS and ALB 
+Remove all the configuration from the `application.properties` file and keep with you to add this as an environment variable in task-definition. 
+
 Now you know how to run your application locally, lets move the app running in a ECS, one EC2 cluster. 
 
 ##### ECR - pushing your SpringBoot-API IMAGE  
@@ -62,7 +65,7 @@ Now you know how to run your application locally, lets move the app running in a
 ##### ECS Cluster and define TASK-DEFINITION 
 Not going into more details, hope you will create a Cluster, define a task definition with two containers. 
 1. The application container named `springboot-api` and in the `NETWORK SETTINGS` place inside `Links` add this value like `mymongodb:mymongodb`. So the application will check the container which is exposing as `mymongodb`. In the port mapping add Port mappings
-`Host port` keep it empty(because we will use alb),  `Container port` 8080. 
+`Host port` keep it empty(because we will use alb),  `Container port` 8080. Add the environment variable which we have saved from `application.properties` file. 
 2. Now lets create another container in same task-definition named `mymongodb` and in the `NETWORK SETTINGS` place inside `Hostnames` add this value as `mymongodb`, which is the string name for expsoing it service. In the port mapping add Port mappings
 `Host port` as 27017,  `Container port` as 27017. 
 
