@@ -14,6 +14,13 @@ public class Book {
     private String author;
     private Date publishedDate;
 
+    public Book(long id, String title, String author, Date publishedDate) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.publishedDate = publishedDate;
+    }
+
     public long getId() {
         return id;
     }
