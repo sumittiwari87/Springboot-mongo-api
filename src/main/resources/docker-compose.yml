@@ -6,7 +6,7 @@ services:
    ports:
      - 27017:27017
  springboot-api:
-   image: klouspot/evaluation:latest
+   image: springboot-api:latest
    container_name: springboot-api
    ports:
      - 8080:8080
