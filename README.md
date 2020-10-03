@@ -6,7 +6,6 @@ For further reference, please consider the following sections:
 * [Official Gradle documentation](https://docs.gradle.org)
 * [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/gradle-plugin/reference/html/)
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/gradle-plugin/reference/html/#build-image)
-
 # Spring boot API with Mongo DB 
 
 This project is a small POC for exposing all REST API for a bookstore for adding/updating/viewing/deleting book details. Mongo DB has been used a database. 
@@ -21,13 +20,13 @@ This project is a small POC for exposing all REST API for a bookstore for adding
   
 
 
-> The  goal for this project to create two seperate images using docker IMAGE file 
-> create two seperate container, container one for REST API and second one for mongodb
-> Deploy this project on your local machine by running a docker-compose.yaml file 
-> docker-compose yaml file has all details to expose mongo db and creating a link as a service 
-> publishable as-is, all the DB configuartions are in application propertiers file 
-> We can put this also in enviornment variable in docker 
-> Later, deploy a ECS cluster with a EC2 instance and add a task-definition to 
+> The  goal for this project to create two seperate images using docker IMAGE file.
+> Create two seperate container, container one for REST API and second one for mongodb.
+> Deploy this project on your local machine by running a docker-compose.yaml file. 
+> The docker-compose yaml file has all details to expose mongo db and creating a link as a service.
+> Publishable as-is, all the DB configuartions are in application propertiers file. 
+> We can put this also in enviornment variable in docker. 
+> Later, deploy a ECS cluster with a EC2 instance and add a task-definition to the cluster to run a service.
 
 
 
