@@ -1,0 +1,179 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Kloudspot",
+		"_postman_id": "dd1281e8-ec14-ba2b-34be-af94586574d3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AWS",
+			"description": "",
+			"item": [
+				{
+					"name": "AWSPostBook",
+					"request": {
+						"url": "http://alb-springboot-api-1138782272.us-east-1.elb.amazonaws.com/api/v1/book",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"title\":\"Rohan\",\n\t\"author\":\"SQL Docker Book\",\n\t\"publishedDate\": \"2016-02-15\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "AWSGetAllBooks",
+					"request": {
+						"url": "http://alb-springboot-api-1138782272.us-east-1.elb.amazonaws.com//api/v1/books",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "AWSUpdateBook",
+					"request": {
+						"url": "http://alb-springboot-api-1138782272.us-east-1.elb.amazonaws.com/api/v1/book",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"title\":\"Sumit\",\n\t\"author\":\"SQL Docker Book\",\n\t\"publishedDate\": \"2016-02-15\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "AWSDeleteBook",
+					"request": {
+						"url": "http://alb-springboot-api-1138782272.us-east-1.elb.amazonaws.com/api/v1/book/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"title\":\"Sumit\",\n\t\"author\":\"SQL Docker Book\",\n\t\"publishedDate\": \"2016-02-15\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "AWSGETBook",
+					"request": {
+						"url": "http://alb-springboot-api-1138782272.us-east-1.elb.amazonaws.com/api/v1/book/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"title\":\"Sumit\",\n\t\"author\":\"SQL Docker Book\",\n\t\"publishedDate\": \"2016-02-15\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetAllBooks",
+			"request": {
+				"url": "http://localhost:8080/api/v1/books",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Sumit\",\n\t\"author\":\"Docker Book\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PutBook",
+			"request": {
+				"url": "http://localhost:8080/api/v1/book/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"title\":\"Rohan\",\n\t\"author\":\"SQL Docker Book\",\n\t\"publishedDate\": \"2016-02-15\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetBook",
+			"request": {
+				"url": "http://localhost:8080/api/v1/book/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PostBook",
+			"request": {
+				"url": "http://localhost:8080/api/v1/book/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"title\":\"Rohan\",\n\t\"author\":\"SQL Docker Book\",\n\t\"publishedDate\": \"2016-02-15\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
